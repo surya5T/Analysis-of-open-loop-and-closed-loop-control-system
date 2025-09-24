@@ -17,9 +17,20 @@ C(S) and G(S) are in series, 300/(S^2+10S+20)
 Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 ## Program: 
 ### Open loop System
-
+```
+num=[1]
+den=[1 10 20]
+sys=tf(num,den)
+step(sys)
+```
 ### Closed loop System
-
+```
+num=[300]
+den=[1 10 320]
+sys=tf(num,den)
+t=0:0.01:2;
+step(sys,t)
+```
 ## Procedure:
 	Open MATLAB software
 	Open a new script file.
@@ -28,15 +39,19 @@ Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 	Analyse the result.
 ## Output:
 ### Open Loop System
+![3a1c758e-be20-4f1e-b6bb-06e6c9a3d5c4](https://github.com/user-attachments/assets/3e2ec663-be70-4d6a-9f9b-6abe4204dc54)
+
 ### Closed Loop System
+![77736459-9e1d-40a6-a499-b3d7c9028d49](https://github.com/user-attachments/assets/28c4f32b-1dea-4583-9e4a-132a81087efe)
+
 ## Result:
 Thus the open loop and closed loop system are analysed and the following conclusions are arrived.
 ### Open loop system
-Steady State Error = <br>
-Settling Time = 
+Steady State Error = 0.95 <br>
+Settling Time = 2.2s
 ### Closed loop System
-Steady State Error = <br>
-Settling Time = 
+Steady State Error = 0.0625 <br>
+Settling Time = 1.2s
 
 
 
